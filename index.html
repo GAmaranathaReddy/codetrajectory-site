@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GenAI Edge | Empowering Future Engineers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-800 text-white p-6 sticky top-0 z-50 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold">GenAI Edge</a>
+      <nav class="space-x-4 hidden md:block">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#blog" class="hover:underline">Blog</a>
+        <a href="#demos" class="hover:underline">AI Demos</a>
+        <a href="#register" class="hover:underline">Register</a>
+      </nav>
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <nav id="mobile-menu" class="hidden bg-blue-700 text-white md:hidden">
+    <div class="container mx-auto flex flex-col space-y-2 p-4">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#blog" class="hover:underline">Blog</a>
+      <a href="#demos" class="hover:underline">AI Demos</a>
+      <a href="#register" class="hover:underline">Register</a>
+    </div>
+  </nav>
+
+  <main class="container mx-auto px-4 py-12 space-y-20" id="home">
+    <!-- Hero Section -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h1 class="text-5xl font-bold mb-4">Empowering Students with Future Skills</h1>
+      <p class="text-lg mb-6">Workshops, AI projects, and career mentorship for GenAI and Full Stack development.</p>
+      <a href="#register" class="bg-blue-800 text-white px-8 py-3 rounded-md hover:bg-blue-900">Get Started</a>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2 class="text-3xl font-semibold mb-8 border-b border-gray-300 pb-2">Latest Blog Posts</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-2">Top GenAI Job Roles in 2025</h3>
+          <p class="text-gray-600">Discover the emerging job roles in the AI landscape.</p>
+          <a href="blog/genai-job-roles.html" class="text-blue-700 hover:underline mt-2 inline-block">Read More →</a>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-2">Best Open Source LLM Projects to Contribute</h3>
+          <p class="text-gray-600">Learn how to contribute to real AI projects.</p>
+          <a href="blog/llm-open-source.html" class="text-blue-700 hover:underline mt-2 inline-block">Read More →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- AI Demos Section -->
+    <section id="demos">
+      <h2 class="text-3xl font-semibold mb-8 border-b border-gray-300 pb-2">AI Project Demos</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Resume Analyzer Chatbot</h3>
+          <p class="text-gray-600 mb-4">Analyze resumes with AI and get feedback instantly.</p>
+          <a href="demos/resume-analyzer.html" class="text-blue-700 hover:underline">Try Demo →</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Job Trend Explorer</h3>
+          <p class="text-gray-600 mb-4">Explore technology job trends using real data.</p>
+          <a href="demos/job-trend-explorer.html" class="text-blue-700 hover:underline">Try Demo →</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-3">Interview Prep Coach</h3>
+          <p class="text-gray-600 mb-4">Practice common interview questions with AI help.</p>
+          <a href="demos/interview-prep.html" class="text-blue-700 hover:underline">Try Demo →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="max-w-xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 border-b border-gray-300 pb-2 text-center">Register for Our Workshops</h2>
+      <form action="https://formspree.io/f/yourFormID" method="POST" class="bg-white p-6 rounded-lg shadow space-y-4">
+        <label class="block">
+          <span class="text-gray-700">Name</span>
+          <input type="text" name="name" required class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Email</span>
+          <input type="email" name="email" required class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+        </label>
+        <label class="block">
+          <span class="text-gray-700">College (optional)</span>
+          <input type="text" name="college" class="mt-1 block w-full rounded border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" />
+        </label>
+        <button type="submit" class="w-full bg-blue-800 text-white py-3 rounded hover:bg-blue-900 transition">Register Now</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-blue-800 text-white py-6 mt-20 text-center">
+    <p>© 2025 GenAI Edge. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
