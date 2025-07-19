@@ -55,9 +55,12 @@
             .then(html => {
               const parser = new DOMParser();
               const doc = parser.parseFromString(html, 'text/html');
-              const mainContent = doc.querySelector('main');
-              if (mainContent) {
-                contentDisplay.innerHTML = mainContent.innerHTML;
+              let content = doc.querySelector('main');
+              if (!content) {
+                content = doc.querySelector('.blog-container');
+              }
+              if (content) {
+                contentDisplay.innerHTML = content.innerHTML;
               } else {
                 contentDisplay.innerHTML = '<p>Error loading content.</p>';
               }
