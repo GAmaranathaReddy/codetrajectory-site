@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineering Curriculum 2025</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI Engineering Curriculum 2025</h1>
+    </header>
+    <main>
+        <article>
+            <p>I spent 3+ hours in the last 2 weeks putting together this no-nonsense curriculum so you can break into AI as a software engineer in 2025.</p>
+            <p>This post (plus flowchart) gives you the latest AI trends, core skills, and tool stack you’ll need. I want to see how you use this to level up. Save it, share it, and take action.</p>
+
+            <h2>1. LLMs (Large Language Models)</h2>
+            <p>This is the core of almost every AI product right now. think ChatGPT, Claude, Gemini. To be valuable here, you need to:</p>
+            <ul>
+                <li>Design great prompts (zero-shot, CoT, role-based)</li>
+                <li>Fine-tune models (LoRA, QLoRA, PEFT, this is how you adapt LLMs for your use case)</li>
+                <li>Understand embeddings for smarter search and context</li>
+                <li>Master function calling (hooking models up to tools/APIs in your stack)</li>
+                <li>Handle hallucinations (trust me, this is a must in prod)</li>
+            </ul>
+            <p><strong>Tools:</strong> OpenAI GPT-4o, Claude, Gemini, Hugging Face Transformers, Cohere</p>
+
+            <h2>2. RAG (Retrieval-Augmented Generation)</h2>
+            <p>This is the backbone of every AI assistant/chatbot that needs to answer questions with real data (not just model memory).</p>
+            <p><strong>Key skills:</strong></p>
+            <ul>
+                <li>Chunking & indexing docs for vector DBs</li>
+                <li>Building smart search/retrieval pipelines</li>
+                <li>Injecting context on the fly (dynamic context)</li>
+                <li>Multi-source data retrieval (APIs, files, web scraping)</li>
+                <li>Prompt engineering for grounded, truthful responses</li>
+            </ul>
+            <p><strong>Tools:</strong> FAISS, Pinecone, LangChain, Weaviate, ChromaDB, Haystack</p>
+
+            <h2>3. Agentic AI & AI Agents</h2>
+            <p>Forget single bots. The future is teams of agents coordinating to get stuff done, think automated research, scheduling, or workflows.</p>
+            <p><strong>What to learn:</strong></p>
+            <ul>
+                <li>Agent design (planner/executor/researcher roles)</li>
+                <li>Long-term memory (episodic, context tracking)</li>
+                <li>Multi-agent communication & messaging</li>
+                <li>Feedback loops (self-improvement, error handling)</li>
+                <li>Tool orchestration (using APIs, CRMs, plugins)</li>
+            </ul>
+            <p><strong>Tools:</strong> CrewAI, LangGraph, AgentOps, FlowiseAI, Superagent, ReAct Framework</p>
+
+            <h2>4. AI Engineer</h2>
+            <p>You need to be able to ship, not just prototype.</p>
+            <p><strong>Get good at:</strong></p>
+            <ul>
+                <li>Designing & orchestrating AI workflows (combine LLMs + tools + memory)</li>
+                <li>Deploying models and managing versions</li>
+                <li>Securing API access & gateway management</li>
+                <li>CI/CD for AI (test, deploy, monitor)</li>
+                <li>Cost and latency optimization in prod</li>
+                <li>Responsible AI (privacy, explainability, fairness)</li>
+            </ul>
+            <p><strong>Tools:</strong> Docker, FastAPI, Hugging Face Hub, Vercel, LangSmith, OpenAI API, Cloudflare Workers, GitHub Copilot</p>
+
+            <h2>5. ML Engineer</h2>
+            <p>Old-school but essential. AI teams always need:</p>
+            <ul>
+                <li>Data cleaning & feature engineering</li>
+                <li>Classical ML (XGBoost, SVM, Trees)</li>
+                <li>Deep learning (TensorFlow, PyTorch)</li>
+                <li>Model evaluation & cross-validation</li>
+                <li>Hyperparameter optimization</li>
+                <li>MLOps (tracking, deployment, experiment logging)</li>
+                <li>Scaling on cloud</li>
+            </ul>
+            <p><strong>Tools:</strong> scikit-learn, TensorFlow, PyTorch, MLflow, Vertex AI, Apache Airflow, DVC, Kubeflow</p>
+        </article>
+    </main>
+</body>
+</html>
