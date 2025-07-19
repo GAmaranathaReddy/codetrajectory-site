@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Getting Started with Streamlit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <main class="blog-container max-w-3xl mx-auto py-12 px-4">
+    <h1 class="text-3xl font-bold mb-6">Getting Started with Streamlit</h1>
+    <p class="mb-4 text-gray-700">Streamlit is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science. In just a few minutes, you can build and deploy powerful data apps.</p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Why Streamlit?</h2>
+    <ul class="list-disc ml-8 mb-4">
+      <li>Super simple to use — turn Python scripts into web apps with minimal code.</li>
+      <li>Great for rapid prototyping and sharing results.</li>
+      <li>Supports interactive widgets, charts, and media.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Installation</h2>
+    <pre class="bg-gray-100 rounded p-2 mb-4">pip install streamlit</pre>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Your First App</h2>
+    <pre class="bg-gray-100 rounded p-4 text-sm overflow-x-auto mb-4">import streamlit as st
+
+st.title("Hello, Streamlit!")
+st.write("Welcome to your first Streamlit app.")
+</pre>
+    <p class="mb-4">Save this as <code>app.py</code> and run:</p>
+    <pre class="bg-gray-100 rounded p-2 mb-4">streamlit run app.py</pre>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Key Features</h2>
+    <ul class="list-disc ml-8 mb-4">
+      <li>Widgets: <code>st.button</code>, <code>st.slider</code>, <code>st.selectbox</code>, etc.</li>
+      <li>Charts: <code>st.line_chart</code>, <code>st.bar_chart</code>, <code>st.map</code></li>
+      <li>Media: <code>st.image</code>, <code>st.audio</code>, <code>st.video</code></li>
+      <li>Layout: Columns, expanders, sidebar, etc.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Resources</h2>
+    <ul class="list-disc ml-8 mb-4">
+      <li><a href="https://docs.streamlit.io/" class="text-blue-600 underline" target="_blank">Streamlit Documentation</a></li>
+      <li><a href="https://streamlit.io/gallery" class="text-blue-600 underline" target="_blank">App Gallery</a></li>
+    </ul>
+
+    <p class="mt-8 text-gray-500">Written by GenAI Edge Team, July 2025</p>
+  </main>
+</body>
+</html>

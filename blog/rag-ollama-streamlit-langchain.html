@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Production-Ready RAG Application with Ollama, Streamlit, LangChain & FastAPI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <main class="blog-container max-w-3xl mx-auto py-12 px-4">
+    <h1 class="text-3xl font-bold mb-6">What is RAG (Retrieval-Augmented Generation)?</h1>
+    <p class="mb-4 text-gray-700">Retrieval-Augmented Generation (RAG) is an AI technique that combines the power of large language models (LLMs) with external knowledge sources. Instead of relying only on what the model knows, RAG retrieves relevant information from your own documents and feeds it to the LLM, resulting in more accurate, up-to-date, and context-aware answers.</p>
+    <img src="../assets/img/rag.png" alt="RAG Architecture Diagram" class="my-8 mx-auto rounded shadow-lg max-w-full" />
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Why use RAG?</h2>
+    <ul class="list-disc ml-8 mb-4">
+      <li>Get answers grounded in your own data, not just the LLM’s training set.</li>
+      <li>Easily update the knowledge base by adding new documents.</li>
+      <li>Reduce hallucinations and improve factual accuracy.</li>
+      <li>Enable domain-specific Q&A, search, and summarization.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Typical Architecture</h2>
+    <ul class="list-disc ml-8 mb-4">
+      <li><b>Document Store:</b> Your files (txt, pdf, docx, etc.)</li>
+      <li><b>Embedding & Indexing:</b> Convert documents into searchable vectors</li>
+      <li><b>Retriever:</b> Finds the most relevant chunks for a user’s question</li>
+      <li><b>LLM (Ollama):</b> Generates answers using both the question and retrieved context</li>
+      <li><b>API/UI (FastAPI, Streamlit):</b> Lets users upload files, ingest data, and ask questions</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Common Use Cases</h2>
+    <ul class="list-disc ml-8 mb-4">
+      <li>Internal knowledge base Q&A for teams</li>
+      <li>Customer support bots using product manuals</li>
+      <li>Legal, medical, or research assistants using private documents</li>
+      <li>Summarizing or searching large document collections</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">How to Build a RAG App</h2>
+    <p class="mb-4">You can build a RAG app using open-source tools like Ollama, LangChain, FastAPI, and Streamlit. Here’s a high-level workflow:</p>
+    <ol class="list-decimal ml-8 mb-4">
+      <li>Upload or place your documents in a folder.</li>
+      <li>Ingest and index the documents (convert to embeddings).</li>
+      <li>Ask a question via the UI or API.</li>
+      <li>The app retrieves relevant info and the LLM generates an answer.</li>
+    </ol>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Sample Code Snippets</h2>
+    <pre class="bg-gray-100 rounded p-4 text-sm overflow-x-auto mb-4"># Ingest documents
+from rag_core import load_and_split_docs, get_vectorstore
+
+docs = load_and_split_docs("./data")
+vectordb = get_vectorstore(docs)
+vectordb.persist()
+
+# Ask a question
+from langchain_community.vectorstores import Chroma
+from langchain_community.embeddings import OllamaEmbeddings
+from rag_core import get_qa_chain, VECTORDB_PATH, OLLAMA_MODEL
+
+vectordb = Chroma(
+    persist_directory=VECTORDB_PATH,
+    embedding_function=OllamaEmbeddings(model=OLLAMA_MODEL)
+)
+qa = get_qa_chain(vectordb)
+answer = qa.run("Your question here")
+print(answer)
+</pre>
+    <p class="mb-4">For a full working app (with FastAPI backend and Streamlit UI), see the reference implementation below.</p>
+
+    <h2 class="text-2xl font-semibold mt-8 mb-2">Reference Implementation</h2>
+    <p class="mb-4">Check out the complete open-source project here:<br>
+      <a href="https://github.com/GAmaranathaReddy/rag-app" class="text-blue-600 underline" target="_blank">github.com/GAmaranathaReddy/rag-app</a>
+    </p>
+    <p class="mt-8 text-gray-500">Written by GenAI Edge Team, July 2025</p>
+  </main>
+</body>
+</html>
