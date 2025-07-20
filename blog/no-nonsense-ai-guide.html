@@ -1,8 +1,39 @@
-<div class="blog-container" style="max-width: 800px; margin: auto; padding: 2rem; background: #ffffff; border-radius: 12px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);">
+<div class="slider-container" style="max-width: 600px; margin: 2rem auto; text-align: center;">
+  <img id="slider-img" src="assets/img/genai_2025.png" alt="AI Guide Reference" style="width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.08); max-height: 350px; object-fit: contain;" />
+  <div id="slider-caption" class="text-gray-700 mt-2 text-base"></div>
+  <div class="mt-4 flex justify-center gap-4">
+    <button type="button" id="prev-btn" class="px-4 py-2 bg-blue-100 rounded hover:bg-blue-200">Previous</button>
+    <button type="button" id="next-btn" class="px-4 py-2 bg-blue-100 rounded hover:bg-blue-200">Next</button>
+  </div>
+</div>
+<script>
+  const images = [
+    { src: 'assets/img/genai_2025.png', caption: 'AI Engineer Roadmap Overview' },
+    { src: 'assets/img/genai_2025_1.png', caption: 'GenAI Skills & Tools Landscape' },
+    { src: 'assets/img/topic_example.png', caption: 'Example: AI Project Topics' }
+  ];
+  let current = 0;
+  function showImg(idx) {
+    const img = document.getElementById('slider-img');
+    const caption = document.getElementById('slider-caption');
+    img.src = images[idx].src;
+    caption.textContent = images[idx].caption;
+  }
+  document.getElementById('prev-btn').onclick = function() {
+    current = (current - 1 + images.length) % images.length;
+    showImg(current);
+  };
+  document.getElementById('next-btn').onclick = function() {
+    current = (current + 1) % images.length;
+    showImg(current);
+  };
+  // Show the first image and caption on load
+  showImg(current);
+</script>
+
+<div class="blog-container" style="max-width: 800px; margin: auto; padding: 2rem; background: #ffffff; border-radius: 12px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);"></div>
     <h1 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">The No-Nonsense AI Engineer Roadmap for 2025</h1>
     <p style="margin-bottom: 1rem;">I’ve put together this no-fluff guide so you can break into AI as a software engineer in 2025. Whether you're new or pivoting, this post gives you the key trends, skills, and toolsets to get hired or build your own AI project.</p>
-
-    <img src="assets/img/genai_2025.png" alt="No-Nonsense AI Engineer Guide Flowchart" style="width: 100%; border-radius: 8px; margin: 1rem 0;" />
 
     <div class="section" style="margin-bottom: 2rem;">
       <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">1. Large Language Models (LLMs)</h2>
