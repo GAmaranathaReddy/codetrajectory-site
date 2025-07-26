@@ -1,73 +1,105 @@
 <div class="blog-container" style="max-width: 800px; margin: auto; padding: 2rem; background: #ffffff; border-radius: 12px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);">
-    <h1 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">The No-Nonsense AI Engineer Roadmap for 2025</h1>
-    <p style="margin-bottom: 1rem;">I’ve put together this no-fluff guide so you can break into AI as a software engineer in 2025. Whether you're new or pivoting, this post gives you the key trends, skills, and toolsets to get hired or build your own AI project.</p>
-
-    <img src="assets/img/genai_2025.png" alt="No-Nonsense AI Engineer Guide Flowchart" style="width: 100%; border-radius: 8px; margin: 1rem 0;" />
-
-    <div class="section" style="margin-bottom: 2rem;">
-      <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">1. Large Language Models (LLMs)</h2>
-      <p>These are the foundation of nearly every AI product today (think ChatGPT, Claude, Gemini).</p>
-      <ul style="padding-left: 1.5rem;">
-        <li>Prompt design (zero-shot, CoT, role-based)</li>
-        <li>Fine-tuning (LoRA, QLoRA, PEFT)</li>
-        <li>Embeddings for smarter context and search</li>
-        <li>Function calling (integrate with tools/APIs)</li>
-        <li>Hallucination handling (critical for production)</li>
-      </ul>
-      <p><strong>Tools:</strong> GPT-4o, Claude, Gemini, Hugging Face, Cohere</p>
-    </div>
-
-    <div class="section" style="margin-bottom: 2rem;">
-      <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">2. Retrieval-Augmented Generation (RAG)</h2>
-      <p>Every serious chatbot or assistant uses RAG to fetch real-time knowledge from your own data.</p>
-      <ul style="padding-left: 1.5rem;">
-        <li>Chunking + vector DB indexing</li>
-        <li>Smart search pipelines</li>
-        <li>Dynamic context injection</li>
-        <li>Multi-source retrieval (APIs, files, web)</li>
-        <li>Grounded prompting</li>
-      </ul>
-      <p><strong>Tools:</strong> FAISS, Pinecone, LangChain, Weaviate, ChromaDB, Haystack</p>
-    </div>
-
-    <div class="section" style="margin-bottom: 2rem;">
-      <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">3. Agentic AI & AI Agents</h2>
-      <p>The next evolution is multiple agents coordinating on tasks (research, planning, workflows).</p>
-      <ul style="padding-left: 1.5rem;">
-        <li>Planner-executor designs</li>
-        <li>Long-term memory support</li>
-        <li>Multi-agent messaging</li>
-        <li>Feedback loops for self-improvement</li>
-        <li>Tool/API orchestration</li>
-      </ul>
-      <p><strong>Tools:</strong> CrewAI, LangGraph, AgentOps, FlowiseAI, Superagent, ReAct</p>
-    </div>
-
-    <div class="section" style="margin-bottom: 2rem;">
-      <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">4. AI Engineer (Deployment & Ops)</h2>
-      <p>This is about shipping AI systems, not just tinkering with notebooks.</p>
-      <ul style="padding-left: 1.5rem;">
-        <li>AI workflows orchestration</li>
-        <li>Model deployment & version control</li>
-        <li>API security & CI/CD pipelines</li>
-        <li>Latency & cost optimizations</li>
-        <li>Responsible AI practices</li>
-      </ul>
-      <p><strong>Tools:</strong> Docker, FastAPI, Hugging Face Hub, LangSmith, Cloudflare Workers, GitHub Copilot</p>
-    </div>
-
-    <div class="section" style="margin-bottom: 2rem;">
-      <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">5. Machine Learning Engineer</h2>
-      <p>Still important! These skills help build foundational models and pipelines.</p>
-      <ul style="padding-left: 1.5rem;">
-        <li>Data cleaning & feature engineering</li>
-        <li>Classical ML (XGBoost, SVM)</li>
-        <li>Deep learning (TensorFlow, PyTorch)</li>
-        <li>Model evaluation and tuning</li>
-        <li>MLOps and cloud scaling</li>
-      </ul>
-      <p><strong>Tools:</strong> Scikit-learn, TensorFlow, PyTorch, MLflow, Vertex AI, Kubeflow, Airflow, DVC</p>
-    </div>
-
-    <p><strong>📌 Save this roadmap. Share it with someone trying to enter AI. Most importantly — start building.</strong></p>
+  <!-- Hero Section -->
+  <div class="text-center mb-8">
+    <h1 style="color: #1a237e; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">AI Engineer Roadmap: Essential Skills & Tools for 2025</h1>
+    <h2 style="color: #3949ab; font-size: 1.25rem; font-weight: 500; margin-bottom: 1rem;">Break into AI with the key skills, trends, and toolsets for real-world impact</h2>
+    <p style="margin-bottom: 1rem; color: #374151;">I’ve put together this no-fluff guide so you can break into AI as a software engineer in 2025. Whether you're new or pivoting, this post gives you the key trends, skills, and toolsets to get hired or build your own AI project.</p>
   </div>
+
+  <div class="section" style="margin-bottom: 2rem;">
+    <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 2.25rem; font-weight: 700;">
+      <span style="font-size:2.5rem;"></span> 1. Large Language Models (LLMs)
+    </h2>
+    <img src="/assets/img/llm-diagram.png" alt="LLM Pipeline Diagram" style="width: 100%; max-width: 700px; border-radius: 8px; margin: 2rem auto; display: block; box-shadow: 0 4px 16px rgba(44,62,80,0.12);">
+    <p style="color: #3949ab; font-size: 1rem; margin: 0.5rem 0 1.5rem 0; text-align: center;">This diagram shows the flow of user input through prompt engineering, into a large language model (LLM), and finally producing an output. Each box represents a key stage in building and deploying LLM-powered applications.</p>
+    <div style="height: 2rem;"></div>
+    <p>These are the foundation of nearly every AI product today (think ChatGPT, Claude, Gemini).</p>
+    <ul style="padding-left: 1.5rem;">
+      <li><strong>1.</strong> Prompt design (zero-shot, CoT, role-based)</li>
+      <li><strong>2.</strong> Fine-tuning (LoRA, QLoRA, PEFT)</li>
+      <li><strong>3.</strong> Embeddings for smarter context and search</li>
+      <li><strong>4.</strong> Function calling (integrate with tools/APIs)</li>
+      <li><strong>5.</strong> Hallucination handling (critical for production)</li>
+    </ul>
+    <div style="height: 1.5rem;"></div>
+    <p><strong>Tools:</strong> Ollama, GPT-4o, Claude, Gemini, Hugging Face, Cohere</p>
+  </div>
+
+  <div class="section" style="margin-bottom: 2rem;">
+    <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 2.25rem; font-weight: 700;">
+      <span style="font-size:2.5rem;"></span> 2. Retrieval-Augmented Generation (RAG)
+    </h2>
+    <img src="/assets/img/rag-diagram.png" alt="RAG Pipeline Diagram" style="width: 100%; max-width: 700px; border-radius: 8px; margin: 2rem auto; display: block; box-shadow: 0 4px 16px rgba(44,62,80,0.12);">
+    <p style="color: #3949ab; font-size: 1rem; margin: 0.5rem 0 1.5rem 0; text-align: center;">This diagram illustrates the Retrieval-Augmented Generation (RAG) pipeline, where user queries are processed, relevant data is retrieved from a knowledge base, and combined with LLMs to generate grounded, accurate responses.</p>
+    <div style="height: 2rem;"></div>
+    <p>Every serious chatbot or assistant uses RAG to fetch real-time knowledge from your own data.</p>
+    <ul style="padding-left: 1.5rem;">
+      <li><strong>1.</strong> Chunking + vector DB indexing</li>
+      <li><strong>2.</strong> Smart search pipelines</li>
+      <li><strong>3.</strong> Dynamic context injection</li>
+      <li><strong>4.</strong> Multi-source retrieval (APIs, files, web)</li>
+      <li><strong>5.</strong> Grounded prompting</li>
+    </ul>
+    <div style="height: 1.5rem;"></div>
+    <p><strong>Tools:</strong> FAISS, Pinecone, LangChain, Weaviate, ChromaDB, Haystack</p>
+  </div>
+
+  <div class="section" style="margin-bottom: 2rem;">
+    <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 2.25rem; font-weight: 700;">
+      <span style="font-size:2.5rem;"></span> 3. Agentic AI & AI Agents
+    </h2>
+    <img src="/assets/img/agent-diagram.png" alt="Agentic AI Diagram" style="width: 100%; max-width: 700px; border-radius: 8px; margin: 2rem auto; display: block; box-shadow: 0 4px 16px rgba(44,62,80,0.12);">
+    <p style="color: #3949ab; font-size: 1rem; margin: 0.5rem 0 1.5rem 0; text-align: center;">This diagram visualizes agentic AI systems, showing how multiple agents (planner, executor, memory) interact and coordinate to solve complex tasks using tools and feedback loops.</p>
+    <div style="height: 2rem;"></div>
+    <p>The next evolution is multiple agents coordinating on tasks (research, planning, workflows).</p>
+    <ul style="padding-left: 1.5rem;">
+      <li><strong>1.</strong> Planner-executor designs</li>
+      <li><strong>2.</strong> Long-term memory support</li>
+      <li><strong>3.</strong> Multi-agent messaging</li>
+      <li><strong>4.</strong> Feedback loops for self-improvement</li>
+      <li><strong>5.</strong> Tool/API orchestration</li>
+    </ul>
+    <div style="height: 1.5rem;"></div>
+    <p><strong>Tools:</strong> CrewAI, LangGraph, AgentOps, FlowiseAI, Superagent, ReAct</p>
+  </div>
+
+  <div class="section" style="margin-bottom: 2rem;">
+    <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 2.25rem; font-weight: 700;">
+      <span style="font-size:2.5rem;"></span> 4. AI Engineer (Deployment & Ops)
+    </h2>
+    <img src="/assets/img/deploy-diagram.png" alt="Deployment & Ops Diagram" style="width: 100%; max-width: 700px; border-radius: 8px; margin: 2rem auto; display: block; box-shadow: 0 4px 16px rgba(44,62,80,0.12);">
+    <p style="color: #3949ab; font-size: 1rem; margin: 0.5rem 0 1.5rem 0; text-align: center;">This diagram outlines the deployment and operations pipeline for AI systems, from source code and CI/CD to model deployment, API endpoints, and monitoring.</p>
+    <div style="height: 2rem;"></div>
+    <p>This is about shipping AI systems, not just tinkering with notebooks.</p>
+    <ul style="padding-left: 1.5rem;">
+      <li><strong>1.</strong> AI workflows orchestration</li>
+      <li><strong>2.</strong> Model deployment & version control</li>
+      <li><strong>3.</strong> API security & CI/CD pipelines</li>
+      <li><strong>4.</strong> Latency & cost optimizations</li>
+      <li><strong>5.</strong> Responsible AI practices</li>
+    </ul>
+    <div style="height: 1.5rem;"></div>
+    <p><strong>Tools:</strong> Docker, FastAPI, Hugging Face Hub, LangSmith, Cloudflare Workers, GitHub Copilot</p>
+  </div>
+
+  <div class="section" style="margin-bottom: 2rem;">
+    <h2 style="color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 2.25rem; font-weight: 700;">
+      <span style="font-size:2.5rem;"></span> 5. Machine Learning Engineer
+    </h2>
+    <img src="/assets/img/ml-diagram.png" alt="ML Pipeline Diagram" style="width: 100%; max-width: 700px; border-radius: 8px; margin: 2rem auto; display: block; box-shadow: 0 4px 16px rgba(44,62,80,0.12);">
+    <p style="color: #3949ab; font-size: 1rem; margin: 0.5rem 0 1.5rem 0; text-align: center;">This diagram shows the machine learning pipeline, including data cleaning, feature engineering, model training, evaluation, and deployment for scalable ML solutions.</p>
+    <div style="height: 2rem;"></div>
+    <p>Still important! These skills help build foundational models and pipelines.</p>
+    <ul style="padding-left: 1.5rem;">
+      <li><strong>1.</strong> Data cleaning & feature engineering</li>
+      <li><strong>2.</strong> Classical ML (XGBoost, SVM)</li>
+      <li><strong>3.</strong> Deep learning (TensorFlow, PyTorch)</li>
+      <li><strong>4.</strong> Model evaluation and tuning</li>
+      <li><strong>5.</strong> MLOps and cloud scaling</li>
+    </ul>
+    <div style="height: 1.5rem;"></div>
+    <p><strong>Tools:</strong> Scikit-learn, TensorFlow, PyTorch, MLflow, Vertex AI, Kubeflow, Airflow, DVC</p>
+  </div>
+
+  <p style="background: #e3f2fd; padding: 1rem; border-radius: 8px; color: #1a237e; font-weight: 500; text-align: center; margin-top: 2rem;">📌 Save this roadmap. Share it with someone trying to enter AI. Most importantly — start building.</p>
+</div>
