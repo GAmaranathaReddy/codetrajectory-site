@@ -56,6 +56,7 @@
                 <span>🤖</span> A No-Nonsense Guide to AI
               </a>
             </li>
+
           </ul>
         </div>
         <div class="md:w-7/8 px-2">
@@ -73,12 +74,17 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('ul a[data-src]');
+      const links = document.querySelectorAll('ul a[data-src], ul a[data-external]');
       const contentDisplay = document.getElementById('content-display');
 
       links.forEach(link => {
         link.addEventListener('click', (e) => {
           e.preventDefault();
+          const external = link.getAttribute('data-external');
+          if (external) {
+            contentDisplay.innerHTML = `<iframe src="${external}" style="width:100%;height:600px;border:none;border-radius:8px;"></iframe>`;
+            return;
+          }
           const source = link.getAttribute('data-src');
           fetch(source)
             .then(response => response.text())
