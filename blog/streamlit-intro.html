@@ -7,6 +7,20 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-800">
+  <header class="bg-blue-800 text-white p-6 sticky top-0 z-50 shadow">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="/index.html" class="text-xl font-bold">GenAI Edge</a>
+      <nav class="space-x-4 hidden md:flex items-center flex-nowrap">
+        <a href="/index.html" class="hover:underline">Home</a>
+        <a href="/blog.html" class="hover:underline">Blog</a>
+        <a href="/demos.html" class="hover:underline">AI Demos</a>
+        <a href="/index.html#register" class="hover:underline">Register</a>
+        <a href="https://github.com/GAmaranathaReddy/codetrajectory-site" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" style="width:20px;height:20px;"></a>
+        <a href="https://www.youtube.com/@GenAIEdge" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" style="width:20px;height:20px;"></a>
+      </nav>
+    </div>
+  </header>
+
   <main class="blog-container max-w-3xl mx-auto py-12 px-4">
     <h1 class="text-3xl font-bold mb-6">Getting Started with Streamlit</h1>
     <p class="mb-4 text-gray-700">Streamlit is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science. In just a few minutes, you can build and deploy powerful data apps.</p>
@@ -46,5 +60,15 @@ st.write("Welcome to your first Streamlit app.")
 
     <p class="mt-8 text-gray-500">Written by GenAI Edge Team, July 2025</p>
   </main>
+
+  <footer class="bg-blue-800 text-white py-6 text-center">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+      <p>© 2025 GenAI Edge. All rights reserved.</p>
+      <div class="flex gap-4 mt-2 md:mt-0">
+        <a href="https://github.com/GAmaranathaReddy/codetrajectory-site" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" style="width:20px;height:20px;"> GitHub</a>
+        <a href="https://www.youtube.com/@GenAIEdge" target="_blank" rel="noopener" class="hover:underline flex items-center gap-1"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" style="width:20px;height:20px;"> YouTube</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
